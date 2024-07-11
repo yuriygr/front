@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cover from '../components/Cover.astro';
+
+const title = 'Norma UI'
+const package_name = '@vue-norma/ui'
+// 
+const response = await fetch(`https://registry.npmjs.org/${package_name}/latest`);
+const data = await response.json();
+---
+
+<Layout title={title} description={data.description}>
+	<Cover
+		package_name={package_name}
+		title={title}
+		sub={data.description}
+		version={data.version}
+		license={data.license}
+	/>
+</Layout>
+
+<style>
+
+</style>

@@ -1,0 +1,21 @@
+:root {
+  --x-body--backgroud: #fff;
+  --x-body--color: #495057;
+
+  --x-content__title--color: #212529;
+  --x-content__sub--color: #495057;
+
+  --x-code__field--border-color: #dee2e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --x-body--backgroud: #111;
+    --x-body--color: #adb5bd;
+
+    --x-content__title--color: #f8f9fa;
+    --x-content__sub--color: #adb5bd;
+
+    --x-code__field--border-color: #212529;
+  }
+}
