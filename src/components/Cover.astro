@@ -5,9 +5,10 @@ interface Props {
 	version: string;
 	license: string;
 	package_name: string;
+	github: string;
 }
 
-const { title, sub, version, license, package_name } = Astro.props;
+const { title, sub, version, license, package_name, github } = Astro.props;
 ---
 
 <section class="cover">
@@ -23,13 +24,16 @@ const { title, sub, version, license, package_name } = Astro.props;
 		</div>
 	</div>
 	<div class="meta">
-		<div class="meta__version">
+		<div>
 			Version { version }
 		</div>
-		<div class="meta__license">
+		<div>
 			{ license } license
 		</div>
-		<div class="meta__links">
+		<div>
+			<a target="_blank" href={`${github}`}>github</a>
+		</div>
+		<div>
 			<a target="_blank" href={`https://www.npmjs.com/package/${package_name}`}>npm</a>
 		</div>
 	</div>
